@@ -1,64 +1,65 @@
-var me = "I",
-	buy = true,
-	money = "$2,000",
-	lookAtVehicles = "Car Model"
+// Got To Buy a Car
+
+var carCustomer = "My";
+	gotToBuyACar = true;
+	moneyToBuyCar = 2000;
+	doIHaveMoney = true;
+	carsILikeInLot = "Hondas, Toyota, Mazda";
+	peopleFitInCar = 5;
+	howManyBrandsToChooseFrom = 10;
+	chooseFromCars = "Hondas, Toyotas, Mazdas, Buicks, Pontiacs, Fords";
+	carDealers = 3;
+	newCar = 4000;
 	
-if (buy === true) {
-	console.log("I am looking into cars to buy.")
-} else { 
-	console.log("Keep saving money.")
-};
-
-/*alert("SDI Project 3");
-
-var car1 = { 
-	make: "Pontiac", 
-	model: "Grand Prix", 
-	year: 1997,
-	looks:"Used"
+	console.log("Ok, my car broke down, great now I have to buy a new one.");
 	
-};
-
-var car2 = { 
-	make: "Honda", 
-	model: "Civic", 
-	year: 2002,
-	looks: "New"
+if (gotToBuyACar === true) {
+		console.log("It\'s time to begin a car search then.");
 	
-};
-
-function carDetails() {
-	// display car details here
-	console.log(this.make + " is a " + this.model + " from " + this.year);
-
-}
-
-car1.logDetails = carDetails;
-car2.logDetails = carDetails;
-
-
-car1.logDetails();
-car2.logDetails();
-
-for (var specs in car1) {
-	console.log("specs: " + specs + ", info: ", car1[specs]);
+	} else {
+		console.log("Darn, am gonna have to take the bus.");
+	};
 	
-};
-
-for (var specs in car2) {
-	console.log("specs: " + specs + ", info: ", car2[specs]);
 	
-};
-*/
-
+if (doIHaveMoney === true) {
+		console.log("I got " + moneyToBuyCar + " dollars" + " so let\'s continue our search.");
+	
+	} else {
+		console.log("I got to save up money before I even look.");
+	};
+	
+	// Number Variables
+	console.log("Maybe a new car?");
+	
+if (newCar > moneyToBuyCar) {
+		console.log("Nah, gonna have to get a used car.");
+		
+	} else { 
+		console.log("Yes, am gonna be pimpin\'");
+	};
+	
+	// Object + JSON
+if (gotToBuyACar === true) {
+		console.log("Ok, here is a list with information.")
+	} else { 
+		console.log("Keep saving money.")
+	};
+	
 var handleData = function (json) {
-	for (var i = 0; i < json.cars.length; i++){
+		for (var i = 0; i < json.cars.length; i++){
 		var car = json.cars[i];
-		console.log("Car ID: " + car.uuid + ", Maker: " + car.maker + ", Model: " + car.model + ", Year: " + car.year);
+		console.log("VIN Number: " + car.uuid + ", Maker: " + car.maker + ", Model: " + car.model + ", Year: " + car.year + ", Cost: " + car.cost);
 	};
 };
 
 handleData(json2);
+
+	// Variable Function
+	function cars (p, h, t) {
+		console.log("The " + p + " costs less than " + h + " but only 200 dollars less than " + t);
+	}
+
+	cars("Pontiac", "Honda", "Toyota")
 
 /*
 var jsonstring = JSON.stringify(json);

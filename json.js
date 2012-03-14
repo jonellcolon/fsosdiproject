@@ -5,17 +5,20 @@ var json = {
 		"001": {
 			"maker": "Pontiac",
 			"year": 1997,
-			"model": "Grand Prix"
+			"model": "Grand Prix",
+			"cost": 2000
 			},
 		"002": {
 			"maker": "Honda",
 			"year": 2002,
-			"model": "Civic"
+			"model": "Civic",
+			"cost": 2500
 			},
 		"003": {
 			"maker": "Toyota",
 			"year": 2000,
-			"model": "Accord"
+			"model": "Accord",
+			"cost": 2200
 			}
 	}
 };
@@ -30,19 +33,22 @@ var json2 = {
 			"uuid": "001",
 			"maker": "Pontiac",
 			"year": 1997,
-			"model": "Grand Prix"
+			"model": "Grand Prix",
+			"cost": 2000
 		},
 		{
 			"uuid": "002", 
 			"maker": "Honda",
 			"year": 2002,
-			"model": "Civic"
+			"model": "Civic",
+			"cost": 2500
 		},
 		{
 			"uuid": "003",
 			"maker": "Toyota",
 			"year": 2000,
-			"model": "Accord"
+			"model": "Accord",
+			"cost": 2200
 		}
 	]
 };
