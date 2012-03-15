@@ -13,7 +13,8 @@ var carCustomer = "My";
 	carWorksFine = true;
 	
 	console.log("Ok, my car broke down, great now I have to buy a new one.");
-	
+
+// Nested Conditionals
 if (gotToBuyACar === true) {
 		console.log("It\'s time to begin a car search then.");
 	
@@ -32,7 +33,6 @@ if (doIHaveMoney === true) {
 	
 	console.log("Maybe a new car?");
 	
-// Number Variables
 if (newCar > moneyToBuyCar) {
 		console.log("Nah, gonna have to get a used car.");
 		
@@ -65,7 +65,7 @@ var handleData = function (json) {
 
 handleData(json2);
 
-// Variable Function
+
 function cars (p, h, t) {
 	console.log("The " + p + " costs less than " + h + " but only 200 dollars less than " + t);
 	}
@@ -81,6 +81,8 @@ var salesPersons = 5;
 
 console.log("Fine i'll take my business some where else");
 
+console.log("Found ad in CraigsList so I go see the car.");
+
 // Nested Conditional
 var carPrice = 2000;
 var worksFine = true;
@@ -95,6 +97,7 @@ if (moneyToBuyCar === 2000) {
 	console.log("Keep looking around.");
 	}
 }
+
 
 /*
 var jsonstring = JSON.stringify(json);
