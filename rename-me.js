@@ -10,6 +10,7 @@ var carCustomer = "My";
 	chooseFromCars = "Hondas, Toyotas, Mazdas, Buicks, Pontiacs, Fords";
 	carDealers = 3;
 	newCar = 4000;
+	carWorksFine = true;
 	
 	console.log("Ok, my car broke down, great now I have to buy a new one.");
 	
@@ -28,17 +29,27 @@ if (doIHaveMoney === true) {
 		console.log("I got to save up money before I even look.");
 	};
 	
-	// Number Variables
+	
 	console.log("Maybe a new car?");
 	
+// Number Variables
 if (newCar > moneyToBuyCar) {
 		console.log("Nah, gonna have to get a used car.");
 		
 	} else { 
 		console.log("Yes, am gonna be pimpin\'");
-	};
+	}
 	
-	// Object + JSON
+	console.log("Going to my first car dealer and...")
+	
+// For Loop 
+for (var countdown = 2; countdown < 10; countdown+=1) {
+	console.log("Wow, " + countdown + " cars have rolled out since we got here.");
+};
+
+	console.log("The car\'s here must be real cheap.");
+	
+// Object + JSON
 if (gotToBuyACar === true) {
 		console.log("Ok, here is a list with information.")
 	} else { 
@@ -54,12 +65,36 @@ var handleData = function (json) {
 
 handleData(json2);
 
-	// Variable Function
-	function cars (p, h, t) {
-		console.log("The " + p + " costs less than " + h + " but only 200 dollars less than " + t);
+// Variable Function
+function cars (p, h, t) {
+	console.log("The " + p + " costs less than " + h + " but only 200 dollars less than " + t);
 	}
 
 	cars("Pontiac", "Honda", "Toyota")
+	
+// While Loop	
+var salesPersons = 5;
+	while (salesPersons > 0) {
+	console.log(salesPersons + " Sales people on the floor, excuse me sir can you help me? Did he ignore me?");
+	salesPersons--;
+};
+
+console.log("Fine i'll take my business some where else");
+
+// Nested Conditional
+var carPrice = 2000;
+var worksFine = true;
+
+if (moneyToBuyCar === 2000) {
+	if (carWorksFine === true) {
+	
+	console.log("Then pay the man his money for the car.");
+	
+	} else {
+	
+	console.log("Keep looking around.");
+	}
+}
 
 /*
 var jsonstring = JSON.stringify(json);
