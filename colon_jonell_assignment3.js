@@ -1,20 +1,19 @@
+// Jonell Colon	
+// SDI Assignment 3
+// Term 03-2012
 // Got To Buy a Car
 
 var carCustomer = "My";
 	gotToBuyACar = true;
 	moneyToBuyCar = 2000;
 	doIHaveMoney = true;
-	carsILikeInLot = "Hondas, Toyota, Mazda";
-	peopleFitInCar = 5;
 	howManyBrandsToChooseFrom = 10;
-	chooseFromCars = "Hondas, Toyotas, Mazdas, Buicks, Pontiacs, Fords";
 	carDealers = 3;
 	newCar = 4000;
 	carWorksFine = true;
 	
 	console.log("Ok, my car broke down, great now I have to buy a new one.");
 
-// Nested Conditionals
 if (gotToBuyACar === true) {
 		console.log("It\'s time to begin a car search then.");
 	
@@ -42,7 +41,7 @@ if (newCar > moneyToBuyCar) {
 	
 	console.log("Going to my first car dealer and...")
 	
-// For Loop 
+
 for (var countdown = 2; countdown < 10; countdown+=1) {
 	console.log("Wow, " + countdown + " cars have rolled out since we got here.");
 };
@@ -72,7 +71,7 @@ function cars (p, h, t) {
 
 	cars("Pontiac", "Honda", "Toyota")
 	
-// While Loop	
+	
 var salesPersons = 5;
 	while (salesPersons > 0) {
 	console.log(salesPersons + " Sales people on the floor, excuse me sir can you help me? Did he ignore me?");
@@ -83,7 +82,7 @@ console.log("Fine i'll take my business some where else");
 
 console.log("Found ad in CraigsList so I go see the car.");
 
-// Return Values
+
 var enoughMoney = function(haveCash) {
 	var pricePerPontiac = 2000,
 		oneCar;
@@ -101,7 +100,7 @@ var enoughMoney = function(haveCash) {
 var gotACar = enoughMoney(2000);
 console.log("Cool, "+ gotACar + " car for me to buy.");
 
-// Nested Conditional
+
 var carPrice = 2000;
 var worksFine = true;
 
@@ -115,8 +114,6 @@ if (moneyToBuyCar === 2000) {
 	console.log("Keep looking around.");
 	}
 }
-
-
 
 /*
 var jsonstring = JSON.stringify(json);
