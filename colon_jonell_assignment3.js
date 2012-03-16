@@ -83,6 +83,24 @@ console.log("Fine i'll take my business some where else");
 
 console.log("Found ad in CraigsList so I go see the car.");
 
+// Return Values
+var enoughMoney = function(haveCash) {
+	var pricePerPontiac = 2000,
+		oneCar;
+	if (haveCash < pricePerPontiac) {
+		console.log("Just enough money.");
+		oneCar = 0;
+	}
+	else {
+	oneCar =  Math.floor(haveCash / pricePerPontiac);
+	
+	}
+	return oneCar;
+};
+
+var gotACar = enoughMoney(2000);
+console.log("Cool, "+ gotACar + " car for me to buy.");
+
 // Nested Conditional
 var carPrice = 2000;
 var worksFine = true;
@@ -90,13 +108,14 @@ var worksFine = true;
 if (moneyToBuyCar === 2000) {
 	if (carWorksFine === true) {
 	
-	console.log("Then pay the man his money for the car.");
+	console.log("Then pay the man his money for the car and drive away.");
 	
 	} else {
 	
 	console.log("Keep looking around.");
 	}
 }
+
 
 
 /*
