@@ -3,7 +3,7 @@
 // Term: 1203
 // Project 4 
 
-alert("SDI Project 4");
+alert("SDI Project 4, Week 4");
 
 var jonellLib = function () {}
 
