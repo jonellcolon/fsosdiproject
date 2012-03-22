@@ -11,12 +11,16 @@ var jonellLib = function () {}
 // http://www.authorcode.com/how-to-validate-email-address-in-javascript/
 
 var emailValidation = function (emailValidate) { 
-	var reg = /[a-zA-Z0-9-._+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/;  
-    var validated = reg.test(emailValidate);  
+					/* Regex means that address must begin with alpha numeric numbers 
+					and contain ".", "-". After initial it must have an "@" symbol.
+					As the beginning it must contain alpha numeric after the "@" and
+					a "." after second character and end in lower or upper alphabets.*/
+	var regexp = /[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+.[a-zA-Z]+/;  
+    var validated = regexp.test(emailValidate);  
     if (!validated) {  
-        console.log("Email Address isn't  valid");  
+        console.log("Email Address is not valid");  
 	} else { 
-        console.log("Email Address  is  valid");  
+        console.log("Email Address is valid");  
 	} 
 };
 
@@ -24,56 +28,66 @@ var emailValidation = function (emailValidate) {
 // http://www.zparacha.com/phone_number_regex/#.T2f9RXjVlAc
 
 var phoneValidation = function (validatePhoneNumber){  
-	var phoneNumberPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;  
-	var validated = phoneNumberPattern.test(validatePhoneNumber);
+					/* The regex means that number may start with an optional "(" then followed 
+					by 3 numbers then an optional ")" or "-" followed by 3 more numbers, 
+					another optional "-" and end with 4 numbers. */
+	var regexp = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;  
+	var validated = regexp.test(validatePhoneNumber);
 	if (!validated) {  
-        console.log("Phone Number is not  valid");  
+        console.log("Phone Number is not valid");  
 	} else { 
-        console.log("Phone Number is  valid");  
+        console.log("Phone Number is valid");  
 	} 
 };
 
 // Title Case a string
-// http://forrst.com/posts/Title_Case_Function_for_JavaScript_Strings-iJG
+// http://lawrence.ecorp.net/inet/samples/regexp-format.php
 
-String.prototype.titleCase = function() {
-  	var 
-    words = this.split(/\s+/),
-    word,
-    stop = /^((of)|(the)|a|(an)|(in)|(to)|(and)|(or))$/i;
-
-  for (var idx = 0; idx < words.length; ++idx) {
-    word = words[idx]
-
-    words[idx] = stop.test(word) && idx != 0 && idx < words.length ?
-      word.toLowerCase() :
-      word.substring(0, 1).toUpperCase() + 
-        word.substring(1, word.length).toLowerCase();
-  }
-
-  return words.join(" ");
-}
-// call string with "full sail is awesome".titleCase();
+var titleCase = function (title) {
+							/* The regexp is saying to find a match at the beginning/end 
+							of a word with the "\b" metacharacter and then with the 
+							expressions "[a-z]" to find all lower case characters 
+							from a to z and replace all first characters of each 
+							string toUpperCase.*/
+        return title.toLowerCase().replace(/\b[a-z]/g, cnvrt);
+        function cnvrt() {
+            return arguments[0].toUpperCase();
+        }
+    }
 
 
 // URL Validation (HTTP or HTTPS)
-// http://stackoverflow.com/questions/8505349/validation-of-url-without-www-in-javascript
+// http://msdn.microsoft.com/en-us/library/ff650303.aspx
 
-var urlValidation = "URL..."; 
-var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
+var urlValidation = function (url);
+							/* The regexp is giving us the option of looking for validation of a url
+							"ftp, http or https". Also looks for url starting with numbers,
+							 lower case and upper case words. Continue to look for "." and then
+							 seeks numbers, lower case and upper case words finish the validation
+							 after seeing the "." and checking once more for numbers, lower case 
+							 and upper case words. */
+	var regexp = ^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?$
 	if (regexp.test(urlValidation)) {
-    	console.log("URL is a match");
+    	console.log("URL is correct");
 } else {
-    	console.log("URL does not match");
+    	console.log("URL is not correct");
 }
 
+// Format number to specific number of decimal spaces, as for money
+// http://www.mredkj.com/javascript/nfbasic2.html
 
+var decimalPrecision = function (num)
+	var amount = num.toFixed(2); // Will give 2 decimal points because specified "(2)".
+	console.log(amount)
 
+// Total value of just numbers in an Array
 
-
-
-
-
+var totalArray = ['jonell',31,'Rose',29,'Adassa',3,'Eli',5];
+	var total = 0;
+	for (var i=0; i < totalArray.length; i++) {
+  	if (!isNaN(parseInt(totalArray[i]))) { total += totalArray[i]; }
+}
+console.log(total);
 
 
 
@@ -83,4 +97,10 @@ return {
 	"phoneValidation" : phoneValidation,
 	"titleCase" : titleCase,
 	"urlValidation" : urlValidation,
+	"decimalPrecision" : decimalPrecision,
+	"totalArray" : totalArray
 	
+	};
+};
+
+var lib = jonellLib();
